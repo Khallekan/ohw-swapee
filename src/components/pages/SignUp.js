@@ -100,7 +100,7 @@ const SignUp = () => {
         const postSignUpData = async () => {
             try {
                 const response = await fetch(endpoint, requestOptions);
-                const { username, email, password } = response.json();
+                const { username, email, password } = await response.json();
 
                 if (Array.isArray(username)) {
                     setErrorMessages((prevState) => ({
