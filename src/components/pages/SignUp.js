@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import { Redirect } from 'react-router';
 
+import { Link } from 'react-router-dom';
+
 import '../../css/SignUp.css';
 
 const SignUp = () => {
@@ -275,8 +277,9 @@ const SignUp = () => {
                             />
                             <label htmlFor='terms' className='checkbox'></label>
                             <label htmlFor='terms'>
-                                I agree to the <a href='#'>Terms</a> and
-                                <a href='#'>conditions</a>
+                                I agree to the <Link to='/signup'>Terms</Link>{' '}
+                                and
+                                <Link to='/signup'>conditions</Link>
                             </label>
                         </div>
                         <input
@@ -293,18 +296,14 @@ const SignUp = () => {
                         <p>
                             By clicking the Sign Up button, you confirm that you
                             accept our
-                            <a href='#'>Terms of use</a> and{' '}
-                            <a href='#'>Privacy Policy</a>
+                            <Link to='/signup'>Terms of use</Link> and{' '}
+                            <Link to='/signup'>Privacy Policy</Link>
                         </p>
                         <p>
                             Have an account?
-                            <a
-                                className='register'
-                                id='log-in'
-                                href='../signin\signin.html'
-                            >
+                            <Link to='/signin' className='register' id='log-in'>
                                 Log in
-                            </a>
+                            </Link>
                         </p>
                     </div>
                 </div>

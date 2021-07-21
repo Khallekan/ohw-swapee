@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import { Redirect } from 'react-router';
 
+import { Link } from 'react-router-dom';
+
 import '../../css/SignIn.css';
 
 const SignIn = () => {
@@ -212,9 +214,8 @@ const SignIn = () => {
                                 ></label>
                                 <label htmlFor='remember-me'>Remember me</label>
                             </div>
-                            <a href='../Password_verification/index.html'>
-                                Forgot password
-                            </a>
+                            {/* <a href='../Password_verification/index.html'> */}
+                            <Link to='/signin'>Forgot password</Link>
                         </div>
                         <input
                             type='submit'
@@ -228,13 +229,9 @@ const SignIn = () => {
                     </form>
                     <p>
                         Don’t have an account?
-                        <a
-                            className='register'
-                            id='sign-in'
-                            href='../signup\signup.html'
-                        >
+                        <Link to='/signup' className='register' id='sign-in'>
                             Sign up
-                        </a>
+                        </Link>
                     </p>
                     {isDocumentError && (
                         <div className='document_error' id='document_error'>
